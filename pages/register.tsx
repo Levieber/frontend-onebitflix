@@ -38,12 +38,13 @@ const Register = () => {
 
         if (status === 201) {
             router.push("/login?registred=true")
-        } else
+        } else {
             setToastIsOpen(true)
-        setTimeout(() => {
-            setToastIsOpen(false)
-        }, 1000 * 3)
-        setToastMessage(data.message)
+            setTimeout(() => {
+                setToastIsOpen(false)
+            }, 1000 * 3)
+            setToastMessage(data.message)
+        }
     }
 
     return (
